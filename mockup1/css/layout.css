@@ -1,0 +1,110 @@
+body{
+  font-family: sans-serif;
+  color:black;
+
+}
+
+
+/* PAGE COMPONENT */
+
+.outer{
+  text-align: center;
+}
+
+.page{
+
+  max-width: 1400px;
+  width: 100%;
+  display: inline-block;
+}
+
+.topnav{
+  background-color: #0c7cc4;
+  height: 100px;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.layout{
+	width:100%;
+	height: 100px;
+	background-color: #f5eaea;
+}
+
+
+/* HERO IMAGE */
+
+.hero_content{
+	font-size:28px;
+	text-align: center;
+}
+.hero_text_headline{
+	font-weight: bold;
+	font-size: 34px;
+  padding-bottom: 15px;
+}
+
+.hero_content img{
+	width:100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+
+
+/* SIDEBAR COMPONENT */
+
+.side_bar{
+  height:100%;
+  overflow: auto;
+  margin-top: 20px;
+  margin-bottom:20px;
+  text-align: left;
+  background-color: #c60910;
+  padding: 15px;
+}
+
+
+.side_bar .section{
+   color: white;
+   text-transform: uppercase;
+   font-weight: bold;
+   padding: 5px;
+   font-size: 25px;
+}
+
+.side_bar p {
+  color: #FAFAFA;
+  margin-left: 5px;
+  padding: 3px;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+.side_bar img{
+	float: right;
+  max-width: 300px;
+  max-height: 150px;
+  width: 100%;
+}
+
+/* [class^="side_bar"] element that starts with */
+div [class^="side_bar"]:first-of-type {
+    margin-top: 15px;
+   
+}
+
+div [class^="side_bar"]:last-of-type {
+    margin: 0px;
+   
+}
+
+/* BOTTOM OF PAGE */
+
+.col-12{
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: left;
+}
