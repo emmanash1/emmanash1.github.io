@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animations: Transitions</title>
+
+	<style>
+
+		body{
+			text-align: center;
+		}
+
+		.card{
+			position: relative;
+			display: inline-block;
+			transition: transform 2s ease, filter 2s ease;
+		}
+
+		.card img{
+			width: 100%;
+			height: auto;
+			padding-top: 75px;
+			filter: none;
+			transition: transform 3s ease;
+		}
+
+		.center{
+			padding: 60% 0;
+			text-align: center;
+		}
+
+		.card_overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 3s ease;
+		}
+
+		.card_overlay img{
+			width: 40%;
+			height: auto;
+			transform: scale(1.0);
+			animation: cardoverlay_changescale 10s ease-in-out infinite;
+		}
+
+		.card:hover .card_overlay{
+			opacity: 1;
+		}
+
+		.card:hover img{
+			transform: scale(1.2);
+			filter: none;
+		}
+
+		.card img{
+			transform: scale(1.0);
+		}
+
+		.card:hover .card_overlay img{
+			transform: scale(1.2);
+		}
+
+		@keyframes cardoverlay_changescale {
+			0%{
+				transform: translate(-300px, 500px) scale(1.1, 1.1);
+			}
+			20%{
+				transform: translate(-200px, 200px) scale(1,1) rotate(10deg);
+			}
+			50%{
+				transform: translate(-100px, 100px) scale(1.1,1.1) rotate(-10deg);
+			}
+			80%{
+				transform: translate(100px, -50px) scale(1,1) rotate(10deg);
+			}
+			100%{
+				transform: translate(300px, -500px) scale(1.1,1.1);
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="cardholder">
+		<div class="card">
+			<img src="img/flower.png" alt="flower">
+		<div class="card_overlay">
+			<img src="img/bee.png" alt="bee">
+		</div>
+	</div>
+</div>
+</body>
+</html>
